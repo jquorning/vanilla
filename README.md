@@ -1,3 +1,3 @@
-# replace_v1
+# Vanilla Replacer Version 1
 
 Simple replace in character stream

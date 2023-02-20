@@ -1,10 +1,10 @@
-name = "replace_v1"
+name = "vanilla_replacer_v1"
 description = "Simple replace in character stream"
-version = "0.1.0"
+version = "0.9.1"
 
 authors = ["Jesper Quorning"]
 maintainers = ["Jesper Quorning <jesper.quorning@gmail.com>"]
 maintainers-logins = ["jquorning"]
 licenses = "MIT OR Apache-2.0"
-website = "https://github.com/jquorning/replace_v1"
-tags = ["ada", "simple", "replace", "character", "string", "stream", "generic", "package"]
+website = "https://github.com/jquorning/vanilla_replacer_v1"
+tags = ["ada", "simple", "replace", "character", "string", "stream", "generic", "package", "vanilla"]

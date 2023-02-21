@@ -1,3 +1,1 @@
-# Vanilla Replacer Version 1
-
-Simple replace in character stream
+See [.profile/readme.md](.profile/readme.md)

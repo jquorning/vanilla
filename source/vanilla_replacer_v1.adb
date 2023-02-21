@@ -1,47 +1,48 @@
------------------------------------------------------------------------------
------  - - -- = = ==  G U D  B E V A R E  D A N M A R K  == = = -- - -  -----
------------------------------------------------------------------------------
 --
---  (c) 2023 Quorning Apps, license: MIT OR Apache 2.0
+--  (c) 2023 Jesper Quorning, license: MIT OR Apache 2.0
 --  DANMARK
 --
 
 package body Vanilla_Replacer_V1
 is
-   ---------
-   -- Put --
-   ---------
+   -------------
+   -- Process --
+   -------------
 
-   procedure Put (Item : Character)
+   procedure Process (Item : Character_In)
    is
    begin
       if State_Break then
-         if Map (Item) = null then
-            raise Program_Error;
-         else
+--         if Map (Item) = null then
+--            raise Program_Error;
+--         else
             for X in Map (Item)'Range loop
-               Process (Map (Item) (X));
+               Put (Map (Item) (X));
             end loop;
-         end if;
+--         end if;
       else
          if Item = Break then
             State_Break := True;
          else
-            Process (Item);
+            Put (To_Character_Out (Item));
          end if;
       end if;
-   end Put;
+   end Process;
 
-   ---------
-   -- Put --
-   ---------
+   -------------
+   -- Process --
+   -------------
 
-   procedure Put (Item : String)
-   is
-   begin
-      for A in Item'Range loop
-         Process (Item (A));
-      end loop;
-   end Put;
+   -- procedure Process (Item : String)
+   -- is
+   -- begin
+   --    for A in Item'Range loop
+   --       Process (Character (Item (A)));
+   --    end loop;
+   -- end Process;
 
 end Vanilla_Replacer_V1;
+
+-----------------------------------------------------------------------------
+-----  - - -- = = ==  G U D  B E V A R E  D A N M A R K  == = = -- - -  -----
+-----------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-project Vanilla_Replacer_V1
+library project Vanilla_Replacer_V1
 is
    for Library_Name use "vanilla_replacer_v1";
 

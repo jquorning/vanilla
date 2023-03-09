@@ -1,3 +1,3 @@
-Vanilla Replacer Version 1
---
+# Vanilla Replacer
+
 Simple replace in character stream.

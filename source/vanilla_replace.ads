@@ -3,7 +3,7 @@
 --  DANMARK
 --
 
-package Vanilla_Replace
+package Vanilla_Replace_V1
 is
    ----------------
    -- Characters --
@@ -38,7 +38,7 @@ is
          Put (Item : Character_Out);
 --   with procedure Put (Item : String_Out);
 
-   package Characters_V1
+   package Characters
    is
       Break : Character_In := Character_In'Last;
 
@@ -55,17 +55,27 @@ is
 --   procedure Process (Item : String);
    --  Convinience.
 
-   end Characters_V1;
+   end Characters;
    
    --------------
    -- Strings --
    --------------
-   
-   package Strings_V1
-   is
-   end Strings_V1;
 
-end Vanilla_Replace;
+   generic
+   package Strings
+   is
+   end Strings;
+
+   -------------
+   -- Streams --
+   -------------
+
+   generic
+   package Streams
+   is
+   end Streams;
+   
+end Vanilla_Replace_V1;
 
 -----------------------------------------------------------------------------
 -----  - - -- = = ==  G U D  B E V A R E  D A N M A R K  == = = -- - -  -----

@@ -1,9 +1,9 @@
-with "../vanilla_replacer_v1.gpr";
+with "../vanilla_replace_v4.gpr";
 
-project Example
+project Example_V4
 is
    for Source_Dirs use ("./");
-   for Main use ("replace3.adb");
+   for Main use ("replace_v4.adb");
 --   for Library_Name use "vanilla_replacer_v1";
 
 --   for Source_Dirs use ("source/");
@@ -15,4 +15,4 @@ is
 --      for Default_Switches ("Ada") use ("-gnaty");
 --   end Compiler;
 
-end Example;
+end Example_V4;

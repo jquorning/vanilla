@@ -8,7 +8,7 @@ is
    ----------------
    -- Characters --
    ----------------
-   
+
    generic
       type Character_In  is (<>);
       type Character_Out is (<>);
@@ -56,7 +56,7 @@ is
    --  Convinience.
 
    end Characters;
-   
+
    --------------
    -- Strings --
    --------------
@@ -74,7 +74,7 @@ is
    package Streams
    is
    end Streams;
-   
+
 end Vanilla_Replace_V1;
 
 -----------------------------------------------------------------------------

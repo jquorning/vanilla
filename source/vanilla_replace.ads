@@ -57,24 +57,6 @@ is
 
    end Characters;
 
-   --------------
-   -- Strings --
-   --------------
-
-   generic
-   package Strings
-   is
-   end Strings;
-
-   -------------
-   -- Streams --
-   -------------
-
-   generic
-   package Streams
-   is
-   end Streams;
-
 end Vanilla_Replace;
 
 -----------------------------------------------------------------------------

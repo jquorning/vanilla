@@ -3,7 +3,7 @@
 --  DANMARK
 --
 
-package body Vanilla_Replacer_V1
+package body Vanilla_Replace
 is
    -------------
    -- Process --
@@ -41,7 +41,7 @@ is
    --    end loop;
    -- end Process;
 
-end Vanilla_Replacer_V1;
+end Vanilla_Replace;
 
 -----------------------------------------------------------------------------
 -----  - - -- = = ==  G U D  B E V A R E  D A N M A R K  == = = -- - -  -----

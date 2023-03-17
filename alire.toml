@@ -1,12 +1,13 @@
-name = "vanilla_replace"
+
+name = "avanilla"
 description = "Simple replace in character stream"
-version = "0.9.3"
+version = "0.9.5"
 
 authors = ["Jesper Quorning"]
 maintainers = ["Jesper Quorning <jesper.quorning@gmail.com>"]
 maintainers-logins = ["jquorning"]
 licenses = "MIT OR Apache-2.0"
-website = "https://github.com/jquorning/vanilla_replacer"
-tags = ["ada", "simple", "replace", "character", "string", "stream", "generic", "package", "vanilla"]
 
-project-files = [".alire/vanilla_replace.gpr"]
+website = "https://github.com/jquorning/avanilla"
+tags = ["avanilla", "ada", "simple", "replace", "character", "string", "stream", "generic", "package", "vanilla"]
+project-files = [".alire/vanilla.gpr"]

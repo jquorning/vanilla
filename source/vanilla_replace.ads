@@ -3,12 +3,12 @@
 --  DANMARK
 --
 
-package Vanilla_Replace_V1
+package Vanilla_Replace
 is
    ----------------
    -- Characters --
    ----------------
-   
+
    generic
       type Character_In  is (<>);
       type Character_Out is (<>);
@@ -56,26 +56,8 @@ is
    --  Convinience.
 
    end Characters;
-   
-   --------------
-   -- Strings --
-   --------------
 
-   generic
-   package Strings
-   is
-   end Strings;
-
-   -------------
-   -- Streams --
-   -------------
-
-   generic
-   package Streams
-   is
-   end Streams;
-   
-end Vanilla_Replace_V1;
+end Vanilla_Replace;
 
 -----------------------------------------------------------------------------
 -----  - - -- = = ==  G U D  B E V A R E  D A N M A R K  == = = -- - -  -----

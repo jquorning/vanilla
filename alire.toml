@@ -1,7 +1,7 @@
 
-name = "avanilla"
+name = "vanilla"
 description = "Simple replace in character stream"
-version = "0.9.5"
+version = "0.9.6"
 
 authors = ["Jesper Quorning"]
 maintainers = ["Jesper Quorning <jesper.quorning@gmail.com>"]

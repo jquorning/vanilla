@@ -2,9 +2,18 @@ name: GNAT (Ada)
 
 on:
   push:
-    branches: [ "dev" ]
+    branches:
+    - master
+    - main
+    - dev
+    - dev-*
+
   pull_request:
-    branches: [ "dev" ]
+    branches:
+    - master
+    - main
+    - dev
+    - dev-*
 
 jobs:
   build:
@@ -21,4 +30,4 @@ jobs:
         sudo apt-get install gnat gprbuild
 
     - name: Build
-      run: gprbuild -j0 -p .alire/avanilla.gpr
+      run: gprbuild -j0 -p -P.alire/vanilla.gpr

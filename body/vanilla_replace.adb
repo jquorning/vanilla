@@ -5,41 +5,45 @@
 
 package body Vanilla_Replace
 is
-   -------------
-   -- Process --
-   -------------
-
-   procedure Process (Item : Character_In)
+   package body Characters
    is
-   begin
-      if State_Break then
+      -------------
+      -- Process --
+      -------------
+
+      procedure Process (Item : Character_In)
+      is
+      begin
+         if State_Break then
 --         if Map (Item) = null then
 --            raise Program_Error;
 --         else
-            for X in Map (Item)'Range loop
-               Put (Map (Item) (X));
-            end loop;
+               for X in Map (Item)'Range loop
+                  Put (Map (Item) (X));
+               end loop;
 --         end if;
-      else
-         if Item = Break then
-            State_Break := True;
          else
-            Put (To_Character_Out (Item));
+            if Item = Break then
+               State_Break := True;
+            else
+               Put (To_Character_Out (Item));
+            end if;
          end if;
-      end if;
-   end Process;
+      end Process;
+
+   end Characters;
 
    -------------
    -- Process --
    -------------
 
-   -- procedure Process (Item : String)
-   -- is
-   -- begin
+   --  procedure Process (Item : String)
+   --  is
+   --  begin
    --    for A in Item'Range loop
    --       Process (Character (Item (A)));
    --    end loop;
-   -- end Process;
+   --  end Process;
 
 end Vanilla_Replace;
 

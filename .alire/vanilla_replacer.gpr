@@ -1,0 +1,14 @@
+library project Vanilla_Replace
+is
+   for Library_Name use "vanilla";
+
+   for Source_Dirs use ("source/");
+   for Object_Dir  use ".object/";
+   for Library_Dir use "library";
+
+   package Compiler
+   is
+      for Default_Switches ("Ada") use ("-gnaty");
+   end Compiler;
+
+end Vanilla_Replace;

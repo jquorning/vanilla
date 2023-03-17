@@ -1,4 +1,4 @@
-library project Vanilla
+library project Avanilla
 is
    for Library_Name use "avanilla_v1";
 
@@ -11,4 +11,4 @@ is
       for Default_Switches ("Ada") use ("-gnaty");
    end Compiler;
 
-end Vanilla;
+end Avanilla;

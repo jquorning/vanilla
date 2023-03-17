@@ -33,13 +33,13 @@ is
    -- Process --
    -------------
 
-   -- procedure Process (Item : String)
-   -- is
-   -- begin
+   --  procedure Process (Item : String)
+   --  is
+   --  begin
    --    for A in Item'Range loop
    --       Process (Character (Item (A)));
    --    end loop;
-   -- end Process;
+   --  end Process;
 
 end Vanilla_Replace;
 

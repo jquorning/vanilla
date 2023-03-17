@@ -1,6 +1,6 @@
-library project Vanilla_Replacer
+library project Vanilla_Replace
 is
-   for Library_Name use "vanilla_replacer_v1";
+   for Library_Name use "vanilla";
 
    for Source_Dirs use ("source/");
    for Object_Dir  use ".object/";
@@ -11,4 +11,4 @@ is
       for Default_Switches ("Ada") use ("-gnaty");
    end Compiler;
 
-end Vanilla_Replacer;
+end Vanilla_Replace;

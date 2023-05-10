@@ -11,6 +11,7 @@ is
       case Item is
          when '$'    =>  return "$";
          when 'A'    =>  return "Architecture";
+         when 'R'    =>  return "Recursive-$S-test";
          when 'S'    =>  return "System";
          when 'a'    =>  return "Ada 2012";
          when others =>  raise Data_Error;
@@ -30,7 +31,8 @@ is
       -"Hello Mac $A!",
       -"What is your $S?",
       -"I'm on $a, surely$$!",
-      -"$A$S$a"
+      -"$A$S$a",
+      -"Check -> $R <-"
     );
 
    procedure Put_Character (Item : Character)
@@ -54,11 +56,7 @@ is
       Put         => Put_Character);
 
    package Replacer_02 is new Vanilla_Replace.Strings_V1
-     (--Item_In     => Character,
-      --Item_Out    => Character,
-      --Item_String => String,
-      --To_Item_Out => To_Item_Out,
-      Map         => Mapping,
+     (Map         => Mapping,
       Put         => Put_Character);
 begin
 

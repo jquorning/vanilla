@@ -19,9 +19,11 @@ is
 
    type AString is access String;
 
-   function "-" (Item : AString) return String
-      renames Ada.Strings.Unbounded.To_String;
-      
+   function "-" (Item : String) return AString is
+   begin
+      return new String'(Item);
+   end "-";
+   
    Input_01 : constant array (Positive range <>) of AString :=
     (
       -"$$",

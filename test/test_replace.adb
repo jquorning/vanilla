@@ -32,7 +32,10 @@ is
       -"What is your $S?",
       -"I'm on $a, surely$$!",
       -"$A$S$a",
-      -"Check -> $R <-"
+      -"Check -> $R <-",
+      -"Linger $",
+      -"S",
+      -"Surprise"
     );
 
    procedure Put_Character (Item : Character)

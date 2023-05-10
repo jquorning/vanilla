@@ -5,7 +5,7 @@ procedure Test_Replace
 is
    Data_Error : exception;
 
-   function Map (Item : Character) return String
+   function Mapping (Item : Character) return String
    is
    begin
       case Item is
@@ -15,7 +15,7 @@ is
          when 'a'    =>  return "Ada 2012";
          when others =>  raise Data_Error;
       end case;
-   end Map;
+   end Mapping;
 
    type AString is access String;
 
@@ -39,8 +39,11 @@ is
    end Put_Character;
 
    package Output_01 is new Vanilla_Replace.Characters
-     (Map => Map,
-      Put => Put_Character);
+     (Item_In     => Character,
+      Item_Out    => Character,
+      Item_String => String,
+      Map         => Mapping,
+      Put         => Put_Character);
 begin
    for Line of Input_01 loop
       Output_01.Process (Line.all);

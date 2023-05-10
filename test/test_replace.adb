@@ -45,18 +45,45 @@ is
       return Item;
    end To_Item_Out;
 
-   package Replacer is new Vanilla_Replace.Items_V1
+   package Replacer_01 is new Vanilla_Replace.Items_V1
      (Item_In     => Character,
       Item_Out    => Character,
       Item_String => String,
       To_Item_Out => To_Item_Out,
       Map         => Mapping,
       Put         => Put_Character);
+
+   package Replacer_02 is new Vanilla_Replace.Strings_V1
+     (--Item_In     => Character,
+      --Item_Out    => Character,
+      --Item_String => String,
+      --To_Item_Out => To_Item_Out,
+      Map         => Mapping,
+      Put         => Put_Character);
 begin
-   Replacer.Break := '$';
+
+   -----------------
+   -- Replacer_01 --
+   -----------------
+
+   Replacer_01.Break := '$';
 
    for Line of Input_01 loop
-      Replacer.Process (Line.all);
+      Replacer_01.Process (Line.all);
       Ada.Text_IO.New_Line;
    end loop;
+      
+   Ada.Text_IO.New_Line (2);
+   
+   -----------------
+   -- Replacer_02 --
+   -----------------
+
+   for Line of Input_01 loop
+      Replacer_02.Process (Line.all);
+      Ada.Text_IO.New_Line;
+   end loop;
+   
+   Ada.Text_IO.New_Line (2);
+   
 end Test_Replace;

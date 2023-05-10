@@ -1,5 +1,5 @@
 with Ada.Text_IO;
-with Vanilla.Replace;
+with Vanilla_Replace;
 
 procedure Test_Replace
 is
@@ -36,7 +36,7 @@ is
       Ada.Text_IO.Put (Item);
    end Put_Character;
 
-   package Output_01 is new Vanilla.Replace.Characters
+   package Output_01 is new Vanilla_Replace.Characters
      (Map => Map,
       Put => Put_Character);
 begin

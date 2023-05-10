@@ -38,10 +38,17 @@ is
       Ada.Text_IO.Put (Item);
    end Put_Character;
 
+   function To_Item_Out (Item : Character) return Character
+   is
+   begin
+      return Item;
+   end To_Item_Out;
+
    package Output_01 is new Vanilla_Replace.Items_V1
      (Item_In     => Character,
       Item_Out    => Character,
       Item_String => String,
+      To_Item_Out => To_Item_Out,
       Map         => Mapping,
       Put         => Put_Character);
 begin

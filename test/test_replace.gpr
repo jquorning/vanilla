@@ -1,5 +1,5 @@
 --  with "../vanilla_replace_v4.gpr";
-with "../.alire/vanilla.gpr"
+with "../.alire/vanilla.gpr";
 
 project Test_Replace
 is

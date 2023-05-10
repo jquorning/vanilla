@@ -18,7 +18,7 @@ is
                S : Item_String renames Map (Item);
             begin
                for I in Map (Item)'Range loop
-                  Put (S (I));
+                  Put (To_Item_Out (S (I)));
                end loop;
             end;
             State_Break := False;

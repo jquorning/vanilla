@@ -41,10 +41,10 @@ is
    ----------------
    
    generic
-      with function Map (Item : Item_In)
-           return Item_String;
+      with function Map (Item : Character)
+           return String;
 
-      with procedure Put (Item : Item_Out);
+      with procedure Put (Item : Character);
 
    package Strings_V1
    is

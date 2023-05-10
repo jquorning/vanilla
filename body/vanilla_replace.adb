@@ -35,7 +35,7 @@ is
       -- Process --
       -------------
 
-      procedure Process (Item : String)
+      procedure Process (Item : Item_String)
       is
       begin
          for A in Item'Range loop

@@ -18,7 +18,7 @@ is
 
       type Item_String (<>)
         is array (Positive range <>)
-        of Item_Out;
+        of Item_In;
 
       with function Map (Item : Item_In)
            return Item_String;

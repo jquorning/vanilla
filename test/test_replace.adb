@@ -52,6 +52,8 @@ is
       Map         => Mapping,
       Put         => Put_Character);
 begin
+   Output_01.Break := '$';
+
    for Line of Input_01 loop
       Output_01.Process (Line.all);
       Ada.Text_IO.New_Line;

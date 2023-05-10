@@ -30,7 +30,7 @@ is
       -"Hello Mac $A!",
       -"What is your $S?",
       -"I'm on $a, surely$$!",
-      -"$A$s$a"
+      -"$A$S$a"
     );
 
    procedure Put_Character (Item : Character)

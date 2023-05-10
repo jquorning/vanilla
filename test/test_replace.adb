@@ -38,7 +38,7 @@ is
       Ada.Text_IO.Put (Item);
    end Put_Character;
 
-   package Output_01 is new Vanilla_Replace.Characters
+   package Output_01 is new Vanilla_Replace.Items_V1
      (Item_In     => Character,
       Item_Out    => Character,
       Item_String => String,

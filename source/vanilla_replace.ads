@@ -39,7 +39,7 @@ is
    ----------------
    -- Strings_V1 --
    ----------------
-   
+
    generic
       with function Map (Item : Character)
            return String;

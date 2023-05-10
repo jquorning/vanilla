@@ -43,5 +43,5 @@ begin
    for Line of Input_01 loop
       Output_01.Process (Line.all);
       Ada.Text_IO.New_Line;
-   end for;
+   end loop;
 end Test_Replace;

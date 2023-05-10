@@ -39,7 +39,7 @@ is
       is
       begin
          for A in Item'Range loop
-            Process (A);
+            Process (Item (A));
          end loop;
       end Process;
 

@@ -32,6 +32,9 @@ jobs:
     - name: Build
       run: gprbuild -j0 -p -P.alire/vanilla.gpr
       
-    - name: Build Test
-      run: gprbuild -j0 -p -Ptest/test_replace.gpr
+    - name: Build Test and Run
+      run: >
+        gprbuild -j0 -p -Ptest/test_replace.gpr
+        test/test_replace
+
 

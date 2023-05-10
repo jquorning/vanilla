@@ -27,9 +27,10 @@ is
    Input_01 : constant array (Positive range <>) of AString :=
     (
       -"$$",
-      -"Hello Mac $A !",
-      -"What is your $S",
-      -"I'm on $a, surely$$!"
+      -"Hello Mac $A!",
+      -"What is your $S?",
+      -"I'm on $a, surely$$!",
+      -"$A$s$a"
     );
 
    procedure Put_Character (Item : Character)
@@ -44,7 +45,7 @@ is
       return Item;
    end To_Item_Out;
 
-   package Output_01 is new Vanilla_Replace.Items_V1
+   package Replacer is new Vanilla_Replace.Items_V1
      (Item_In     => Character,
       Item_Out    => Character,
       Item_String => String,
@@ -52,10 +53,10 @@ is
       Map         => Mapping,
       Put         => Put_Character);
 begin
-   Output_01.Break := '$';
+   Replacer.Break := '$';
 
    for Line of Input_01 loop
-      Output_01.Process (Line.all);
+      Replacer.Process (Line.all);
       Ada.Text_IO.New_Line;
    end loop;
 end Test_Replace;

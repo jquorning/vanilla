@@ -36,4 +36,25 @@ is
 
    end Items_V1;
 
+   ----------------
+   -- Strings_V1 --
+   ----------------
+   
+   generic
+      with function Map (Item : Item_In)
+           return Item_String;
+
+      with procedure Put (Item : Item_Out);
+
+   package Strings_V1
+   is
+      Break : Character := '$';
+
+      State_Break : Boolean  := False;
+
+      procedure Process (Item : Character);
+      procedure Process (Item : String);
+
+   end Strings_V1;
+
 end Vanilla_Replace;

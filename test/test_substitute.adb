@@ -1,7 +1,7 @@
 with Ada.Text_IO;
-with Vanilla_Replace;
+with Vanilla_Substitute;
 
-procedure Test_Replace
+procedure Test_Substitute
 is
    Data_Error : exception;
 
@@ -50,7 +50,7 @@ is
       return Item;
    end To_Item_Out;
 
-   package Replacer_01 is new Vanilla_Replace.Items_V1
+   package Replacer_01 is new Vanilla_Substitute.Items_V1
      (Item_In     => Character,
       Item_Out    => Character,
       Item_String => String,
@@ -58,7 +58,7 @@ is
       Map         => Mapping,
       Put         => Put_Character);
 
-   package Replacer_02 is new Vanilla_Replace.Strings_V1
+   package Replacer_02 is new Vanilla_Substitute.Strings_V1
      (Map         => Mapping,
       Put         => Put_Character);
 begin
@@ -87,4 +87,4 @@ begin
    
    Ada.Text_IO.New_Line (2);
    
-end Test_Replace;
+end Test_Substitute;

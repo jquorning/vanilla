@@ -2,7 +2,7 @@
 --  (c) 2023 Jesper Quorning, license: MIT OR Apache 2.0
 --
 
-package Vanilla_Replace
+package Vanilla_Substitute
 is
    --------------------
    -- String of Item --
@@ -57,4 +57,4 @@ is
 
    end Strings_V1;
 
-end Vanilla_Replace;
+end Vanilla_Substitute;

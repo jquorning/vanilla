@@ -2,7 +2,7 @@
 --  (c) 2023 Jesper Quorning, license: MIT OR Apache 2.0
 --
 
-package body Vanilla_Replace
+package body Vanilla_Substitute
 is
    ---------------
    --  Items_V1 --
@@ -94,4 +94,4 @@ is
 
    end Strings_V1;
 
-end Vanilla_Replace;
+end Vanilla_Substitute;

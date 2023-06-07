@@ -12,7 +12,7 @@ tags = []
 executables = ["substitute"]
 
 [[depends-on]]
-avanilla = "*"
+vanilla = "*"
 
 [[pins]]
 vanilla = { path = ".." }

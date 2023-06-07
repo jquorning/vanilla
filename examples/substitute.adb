@@ -4,8 +4,8 @@ with Vanilla_Substitute;
 
 procedure Substitute
 is
-   File_Name_In  : constant string := "source.txt";
-   File_Name_Out : constant string := "target.txt";
+   File_Name_In  : constant String := "source.txt";
+   File_Name_Out : constant String := "target.txt";
 
    package TIO renames Ada.Text_IO;
 
@@ -20,10 +20,8 @@ is
 
    procedure Put (Item : Character) is
    begin
-      Ada.Text_IO.Put (File_Out, Item);
+      TIO.Put (File_Out, Item);
    end Put;
-
-   type String_Access is access String;
 
    ---------
    -- Map --
@@ -45,17 +43,29 @@ is
       end case;
    end Map;
 
+   --------------
+   -- GPR_File --
+   --------------
+
    package GPR_File
      is new Vanilla_Substitute.Strings_V1
        (Map => Map,
         Put => Put);
 
-   procedure Process
+   ------------------------
+   -- Process_Source_Txt --
+   ------------------------
+
+   procedure Process_Source_Txt
    is
       use TIO;
    begin
       Open (File_In,  TIO.In_File,  File_Name_In);
-      Open (File_Out, TIO.Out_File, File_Name_Out);
+      begin
+         Create (File_Out, TIO.Out_File, File_Name_Out);
+      exception when others =>
+         Open (File_Out, TIO.Out_File, File_Name_Out);
+      end;
 
       while not End_Of_File (File_In) loop
          declare
@@ -68,8 +78,8 @@ is
 
       Close (File_Out);
       Close (File_In);
-   end Process;
+   end Process_Source_Txt;
 
 begin
-   Process;
+   Process_Source_Txt;
 end Substitute;

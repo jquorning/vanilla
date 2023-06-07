@@ -2,17 +2,17 @@ with Ada.Text_IO;
 
 with Vanilla_Substitute;
 
-procedure Substitute_V1
+procedure Substitute
 is
-   File_Name_In  : constant string := "config.tpl";
-   File_Name_Out : constant string := "config.gpr";
+   File_Name_In  : constant string := "source.txt";
+   File_Name_Out : constant string := "target.txt";
 
    package TIO renames Ada.Text_IO;
 
    File_In  : TIO.File_Type;
    File_Out : TIO.File_Type;
 
-   Data_Error : Exception;
+   Data_Error : exception;
 
    ---------
    -- Put --
@@ -40,36 +40,36 @@ is
          when 'A'    => return "x86_64";   -- Arch
          when 'D'    => return "macOS";    -- Distro
          when others =>
-	    TIO.Put_Line ("Unexpected Item: " & Item);
-	    raise Data_Error;
+            TIO.Put_Line ("Unexpected Item: " & Item);
+            raise Data_Error;
       end case;
    end Map;
 
    package GPR_File
      is new Vanilla_Substitute.Strings_V1
        (Map => Map,
-	Put => Put);
+        Put => Put);
 
    procedure Process
    is
       use TIO;
    begin
-      Open (File_In,  TIO.In_File,  File_Name_In );
+      Open (File_In,  TIO.In_File,  File_Name_In);
       Open (File_Out, TIO.Out_File, File_Name_Out);
 
       while not End_Of_File (File_In) loop
          declare
-	    Line : constant String := Get_Line (File_In);
-	 begin
+            Line : constant String := Get_Line (File_In);
+         begin
             GPR_File.Process (Line);
-	    New_Line (File_Out);
-	 end;
+            New_Line (File_Out);
+         end;
       end loop;
-   
+
       Close (File_Out);
-      Close (File_In );
+      Close (File_In);
    end Process;
 
 begin
    Process;
-end Substitute_V1;
+end Substitute;

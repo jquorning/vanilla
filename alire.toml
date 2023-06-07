@@ -1,7 +1,7 @@
 
 name = "vanilla"
 description = "Simple replace in character stream"
-version = "0.9.7"
+version = "0.9.8"
 
 authors = ["Jesper Quorning"]
 maintainers = ["Jesper Quorning <jesper.quorning@gmail.com>"]
@@ -10,4 +10,5 @@ licenses = "MIT OR Apache-2.0"
 
 website = "https://github.com/jquorning/avanilla"
 tags = ["avanilla", "ada", "simple", "substitute", "character", "string", "generic", "package", "vanilla"]
-project-files = [".alire/vanilla.gpr"]
+project-files = ["vanilla.gpr"]
+

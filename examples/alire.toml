@@ -1,0 +1,19 @@
+name = "substitute"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["Jesper Quorning"]
+maintainers = ["Jesper Quorning <jesper.quorning@gmail.com>"]
+maintainers-logins = ["jquorning"]
+licenses = "MIT OR Apache-2.0"
+website = ""
+tags = []
+
+executables = ["substitute"]
+
+[[depends-on]]
+avanilla = "*"
+
+[[pins]]
+vanilla = { path = ".." }
+

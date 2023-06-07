@@ -1,9 +1,0 @@
-with "../.alire/vanilla.gpr";
-
-project Test_Substitute
-is
-   for Source_Dirs use ("./");
-   for Object_Dir  use  "./.object";
-   for Main use ("test_substitute.adb");
-
-end Test_Substitute;

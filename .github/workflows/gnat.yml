@@ -24,17 +24,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Set up GNAT toolchain
-      run: >
-        sudo apt-get update &&
-        sudo apt-get install gnat gprbuild
+    - name: Set up stable `alr`
+      uses: alire-project/setup-alire@v2
 
     - name: Build
-      run: gprbuild -j0 -p -P.alire/vanilla.gpr
-      
-    - name: Build Test and Run
-      run: >
-        gprbuild -j0 -p -Ptest/test_replace.gpr &&
-        test/test_replace
+      run: alr build
 
+    - name: Build Test
+      run: cd tests; alr build
 
+    - name: Run Test
+      run: cd tests; alr run

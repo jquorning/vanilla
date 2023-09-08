@@ -4,7 +4,7 @@ test_substitute
 /bin/
 /alire/
 /config/
-/obj/
+/.object/
 /lib/
 /alire/
 /config/

@@ -24,16 +24,19 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Set up GNAT toolchain
-      run: >
-        sudo apt-get update &&
+#    - name: Set up GNAT toolchain
+#      run: >
+#        sudo apt-get update &&
         sudo apt-get install gnat gprbuild
 
-    - name: Build
-      run: gprbuild -j0 -p -Pvanilla.gpr
+#    - name: Build
+#      run: gprbuild -j0 -p -Pvanilla.gpr
 
     - name: Set up stable `alr`
       uses: alire-project/setup-alire@v2
+
+    - name: Build
+      run: alr build
 
     - name: Build Test and Run
       run: >

@@ -103,7 +103,7 @@ is
       Length : Natural := 0;
       Index  : Natural := Source'First;
    begin
-      -- Find length of Target string.
+      --  Find length of Target string.
       while Index <= Source'Last loop
          if Source (Index) = Break then
             declare
@@ -155,7 +155,7 @@ is
 
    function Translate_V2 (Source : String;
                           Map    : Map_Function_Access;
-                          Break  : Character := '$')
+                          Break  : Character := Default_Break)
                          return String
    is
       function Translator

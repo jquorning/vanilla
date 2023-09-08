@@ -34,7 +34,7 @@ jobs:
       
     - name: Build Test and Run
       run: >
-        gprbuild -j0 -p -Ptest/test_replace.gpr &&
-        test/test_replace
+        gprbuild -j0 -p -Ptests/test_vanilla.gpr &&
+        tests/bin/test_vanilla
 
 

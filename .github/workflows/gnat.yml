@@ -31,10 +31,14 @@ jobs:
 
     - name: Build
       run: gprbuild -j0 -p -Pvanilla.gpr
-      
+
+    - name: Set up stable `alr`
+      uses: alire-project/setup-alire@v2
+    
     - name: Build Test and Run
       run: >
-        gprbuild -j0 -p -Ptests/test_vanilla.gpr &&
+        cd tests; alr build; alr run
+#        gprbuild -j0 -p -Ptests/test_vanilla.gpr &&
         tests/bin/test_vanilla
 
 

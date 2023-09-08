@@ -39,6 +39,6 @@ jobs:
       run: >
         cd tests; alr build; alr run
 #        gprbuild -j0 -p -Ptests/test_vanilla.gpr &&
-        tests/bin/test_vanilla
+#        tests/bin/test_vanilla
 
 

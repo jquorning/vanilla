@@ -34,7 +34,7 @@ jobs:
 
     - name: Set up stable `alr`
       uses: alire-project/setup-alire@v2
-    
+
     - name: Build Test and Run
       run: >
         cd tests; alr build; alr run

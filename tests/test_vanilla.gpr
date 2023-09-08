@@ -1,3 +1,4 @@
+with "aunit";
 
 project Test_Vanilla
 is

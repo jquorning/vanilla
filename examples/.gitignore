@@ -1,0 +1,8 @@
+substitute_v1
+.object/
+
+/obj/
+/bin/
+/alire/
+/config/
+target.txt

@@ -1,0 +1,10 @@
+test_substitute
+.object/
+/obj/
+/bin/
+/alire/
+/config/
+/.object/
+/lib/
+/alire/
+/config/

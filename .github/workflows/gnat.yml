@@ -1,0 +1,37 @@
+name: GNAT (Ada)
+
+on:
+  push:
+    branches:
+    - master
+    - main
+    - dev
+    - dev-*
+
+  pull_request:
+    branches:
+    - master
+    - main
+    - dev
+    - dev-*
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up stable `alr`
+      uses: alire-project/setup-alire@v2
+
+    - name: Build
+      run: alr build
+
+    - name: Build Test
+      run: cd tests; alr build
+
+    - name: Run Test
+      run: cd tests; alr run

@@ -1,0 +1,16 @@
+with "config/substitute_config.gpr";
+
+project Substitute
+is
+   for Source_Dirs use ("./", "config/");
+   for Object_Dir  use ".object/" & Substitute_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+   for Main     use ("substitute.adb");
+
+   package Compiler
+   is
+      for Default_Switches ("Ada") use Substitute_Config.Ada_Compiler_Switches;
+   end Compiler;
+
+end Substitute;

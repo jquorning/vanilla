@@ -18,7 +18,7 @@ on:
 jobs:
   build:
 
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
@@ -27,7 +27,7 @@ jobs:
     - name: Set up GNAT toolchain
       run: >
         sudo apt-get update &&
-        sudo apt-get install gnat gprbuild libaunit
+        sudo apt-get install gnat gprbuild libaunit21
 
     - name: Build
       run: gprbuild -j0 -p -Pvanilla.gpr

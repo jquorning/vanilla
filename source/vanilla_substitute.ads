@@ -57,4 +57,19 @@ is
 
    end Strings_V1;
 
+   generic
+      Break : Character := '$';
+      with function Map (Item : Character)
+                        return String;
+   function Translate_V1 (Source : String)
+                         return String;
+
+   type Map_Function_Access is access function (Item : Character)
+                                               return String;
+
+   function Translate_V2 (Source : String;
+                          Map    : Map_Function_Access;
+                          Break  : Character := '$')
+                         return String;
+
 end Vanilla_Substitute;

@@ -94,4 +94,74 @@ is
 
    end Strings_V1;
 
+   ------------------
+   -- Translate_V1 --
+   ------------------
+
+   function Translate_V1 (Source : String) return String
+   is
+      Length : Natural := 0;
+      Index  : Natural := Source'First;
+   begin
+      -- Find length of Target string.
+      while Index <= Source'Last loop
+         if Source (Index) = Break then
+            declare
+               Key_Index : Natural := Index + 1;
+               Key       : Character renames Source (Key_Index);
+               Word      : String    renames Map (Key);
+            begin
+               Length := Length + Word'Length;
+               Index  := Index + 2;  -- Break and Key
+            end;
+         else
+            Length := Length + 1;
+            Index  := Index + 1;
+         end if;
+      end loop;
+
+      --  Fill into Target string.
+      declare
+         Target : String (1 .. Length);
+         Last   : Natural  := Target'First - 1;
+         Index  : Natural  := Source'First;
+      begin
+         while Index <= Source'Last loop
+            if Source (Index) = Break then
+               declare
+                  Key_Index : Natural := Index + 1;
+                  Key       : Character renames Source (Key_Index);
+                  Word      : String    renames Map (Key);
+                  First     : constant Positive := Last + 1;
+               begin
+                  Last := Last + Word'Length;
+                  Target (First .. Last) := Word;
+               end;
+               Index := Index + 2;
+            else
+               Last := Last + 1;
+               Target (Last) := Source (Index);
+               Index := Index + 1;
+            end if;
+         end loop;
+
+         return Target;
+      end;
+   end Translate_V1;
+
+   ------------------
+   -- Translate_V2 --
+   ------------------
+
+   function Translate_V2 (Source : String;
+                          Map    : Map_Function_Access;
+                          Break  : Character := '$')
+                         return String
+   is
+      function Translator
+        is new Translate_V1 (Break => Break, Map => Map.all);
+   begin
+      return Translator (Source);
+   end Translate_V2;
+
 end Vanilla_Substitute;

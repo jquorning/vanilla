@@ -1,4 +1,4 @@
-name = "test_substitute"
+name = "test_vanilla"
 description = ""
 version = "0.1.0-dev"
 
@@ -9,7 +9,7 @@ licenses = "MIT OR Apache-2.0"
 website = ""
 tags = []
 
-executables = ["test_substitute"]
+executables = ["test_vanilla"]
 
 [[depends-on]]
 vanilla = "*"

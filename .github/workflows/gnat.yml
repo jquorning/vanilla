@@ -33,5 +33,5 @@ jobs:
     - name: Build Test
       run: cd tests; alr build
 
-    -name: Run Test
+    - name: Run Test
       run: cd tests; alr run

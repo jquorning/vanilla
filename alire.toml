@@ -8,7 +8,7 @@ maintainers = ["Jesper Quorning <jesper.quorning@gmail.com>"]
 maintainers-logins = ["jquorning"]
 licenses = "MIT OR Apache-2.0"
 
-website = "https://github.com/jquorning/avanilla"
-tags = ["avanilla", "ada", "simple", "substitute", "character", "string", "generic", "package", "vanilla"]
+website = "https://github.com/jquorning/vanilla"
+tags = ["simple", "substitute", "replace", "vanilla"]
 project-files = ["vanilla.gpr"]
 

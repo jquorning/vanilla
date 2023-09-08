@@ -1,6 +1,13 @@
 
 name = "vanilla"
 description = "Simple replace in character stream"
+long-description = """
+Library of simple substitution of tags into strings
+in character streams and strings.
+
+Tags could be $A, $B, $3 etcetera.
+"""
+
 version = "0.9.8"
 
 authors = ["Jesper Quorning"]

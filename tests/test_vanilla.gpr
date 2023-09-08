@@ -1,3 +1,4 @@
+with "vanilla";
 with "aunit";
 
 project Test_Vanilla
